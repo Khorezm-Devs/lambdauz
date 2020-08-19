@@ -8,6 +8,8 @@ lazy val `lambdauz` = (project in file(".")).enablePlugins(PlayScala, PlayAkkaHt
 
 scalacOptions ++= CompilerOptions.cOptions
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
 scalaVersion := "2.13.1"
 
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
