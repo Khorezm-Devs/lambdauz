@@ -6,7 +6,9 @@ version := "1.0"
 
 lazy val `lambdauz` = (project in file(".")).enablePlugins(PlayScala, PlayAkkaHttp2Support)
 
-scalacOptions += "-Ypartial-unification"
+scalacOptions ++= CompilerOptions.cOptions
+
+Global / onChangedBuildSource := ReloadOnSourceChanges
 
 scalaVersion := "2.13.1"
 
