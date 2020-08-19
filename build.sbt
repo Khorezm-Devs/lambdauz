@@ -8,6 +8,8 @@ lazy val `lambdauz` = (project in file(".")).enablePlugins(PlayScala, PlayAkkaHt
 
 scalacOptions += "-Ypartial-unification"
 
+scalaVersion := "2.13.1"
+
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
 
 resolvers ++= Seq(
